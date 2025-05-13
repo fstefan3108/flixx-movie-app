@@ -63,12 +63,12 @@ function appInit() {
             displaySlider();
 
             break;
-        case "/movie-details":
+        case "/movie-details.html":
             console.log("movieDetails function...");
             movieDetails()
 
             break;
-        case "/search":
+        case "/search.html":
 
             search();
 
@@ -78,7 +78,7 @@ function appInit() {
             popularShows();
 
             break;
-        case "/tv-details":
+        case "/tv-details.html":
 
             showDetails();
 

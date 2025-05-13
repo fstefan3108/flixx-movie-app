@@ -65,7 +65,7 @@ function appInit() {
 
             break;
         case "movie-details":
-            console.log('Calling movieDetails function...');
+            
             movieDetails()
 
             break;

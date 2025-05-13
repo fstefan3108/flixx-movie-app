@@ -6,10 +6,8 @@ import noImage from "./assets/no-image.jpg";
 export async function movieDetails() {
 
     const movieID = window.location.search.split("=")[1];
-    console.log("Movie ID:", movieID);
     
     const movie = await fetchData("movie/" + movieID);
-    console.log("Fetched Movie Data:", movie);
 
     bgImage("movie", movie.backdrop_path);
 

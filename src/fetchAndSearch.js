@@ -3,8 +3,6 @@ import globalPath from "./app.js";
 
 export async function fetchData(endpoint) {
 
-    console.log('fetchData called with endpoint:', endpoint);
-
     const apiKey = globalPath.api.apiKey;
     console.log('API Key:', apiKey);
 
@@ -14,7 +12,6 @@ export async function fetchData(endpoint) {
 
         const response = await fetch("https://api.themoviedb.org/3/" + endpoint + "?api_key=" + apiKey + "&langauge=en-US");
         const data = await response.json();
-        console.log("API Response: ", data);
 
         hideSpinner();
 

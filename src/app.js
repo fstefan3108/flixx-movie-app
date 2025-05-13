@@ -63,7 +63,7 @@ function appInit() {
 
             break;
         case "/movie-details":
-            
+            console.log("movieDetails function...");
             movieDetails()
 
             break;

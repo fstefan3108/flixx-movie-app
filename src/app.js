@@ -8,7 +8,6 @@ import { popularShows } from "./popularShows.js";
 import { search } from "./search.js";
 import { showDetails } from "./showDetails.js";
 
-console.log('API_KEY in Production:', process.env.API_KEY);
 
 function getNormalizedPath() {
     const path = window.location.pathname;
@@ -53,34 +52,34 @@ function activeLink() {
 
 
 // Initialize App Script//
-console.log('Current path:', window.location.pathname);
 
 function appInit() {
-    console.log("Current Page:", globalPath.currentPage);
-    switch (globalPath.currentPage) {
-        case "/":
-        case "/index.html":
+
+    const page = globalPath.currentPage.replace(".html", "").replace("/", "");
+    switch (page) {
+        case "":
+        case "index":
 
             popularMovies();
             displaySlider();
 
             break;
-        case "/movie-details.html":
+        case "movie-details":
             console.log('Calling movieDetails function...');
             movieDetails()
 
             break;
-        case "/search.html":
+        case "search":
 
             search();
 
             break;
-        case "/shows.html":
+        case "shows":
 
             popularShows();
 
             break;
-        case "/tv-details.html":
+        case "tv-details":
 
             showDetails();
 

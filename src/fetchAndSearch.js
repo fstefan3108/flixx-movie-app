@@ -32,6 +32,7 @@ export async function searchAPIData() {
 
     const response = await fetch("https://api.themoviedb.org/3/search/" + globalPath.search.type + "?api_key=" + apiKey + "&langauge=en-US&query=" + globalPath.search.term + "&page=" + globalPath.search.page);
     const data = await response.json();
+    console.log("Fetched data:", data);
 
     hideSpinner();
 

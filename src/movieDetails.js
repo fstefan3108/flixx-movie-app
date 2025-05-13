@@ -10,7 +10,7 @@ export async function movieDetails() {
     const movieID = window.location.search.split("=")[1];
     
     const movie = await fetchData("movie/" + movieID);
-
+    console.log("Movie ID:", movieID);
     bgImage("movie", movie.backdrop_path);
 
     const detailsTop = document.createElement("div");

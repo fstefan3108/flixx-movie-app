@@ -59,6 +59,7 @@ function appInit() {
     switch (page) {
         case "":
         case "index":
+        case "/":
 
             popularMovies();
             displaySlider();

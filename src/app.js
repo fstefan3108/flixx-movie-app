@@ -58,7 +58,6 @@ function appInit() {
     const page = globalPath.currentPage.replace(".html", "").replace("/", "");
     switch (page) {
         case "":
-        case "index":
 
             popularMovies();
             displaySlider();

@@ -3,9 +3,7 @@ import { fetchData } from "./fetchAndSearch.js";
 import noImage from './assets/no-image.jpg';
 
 export async function popularMovies() {
-    console.log("Fetching popular movies...");
     const { results } = await fetchData("movie/popular");
-    console.log("Fetched Movies:", results);
     results.forEach(result => {
 
         const card = document.createElement("div");

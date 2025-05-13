@@ -14,7 +14,6 @@ function getNormalizedPath() {
     return path === "/" ? "" : path;
 }
 
-
 const globalPath = {
 
     currentPage: getNormalizedPath(),
@@ -36,8 +35,6 @@ export default globalPath;
 
 // Active Links //
 
-
-console.log("Current page:", globalPath.currentPage);
 
 function activeLink() {
 
@@ -64,7 +61,6 @@ function appInit() {
 
             break;
         case "/movie-details.html":
-            console.log("movieDetails function...");
             movieDetails()
 
             break;

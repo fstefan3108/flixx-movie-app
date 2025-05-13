@@ -3,14 +3,12 @@ import { bgImage } from "./bgImage.js";
 import { fetchData } from "./fetchAndSearch.js";
 import noImage from "./assets/no-image.jpg";
 
-console.log("I work!");
 
 export async function movieDetails() {
 
     const movieID = window.location.search.split("=")[1];
     
     const movie = await fetchData("movie/" + movieID);
-    console.log("Movie ID:", movieID);
     bgImage("movie", movie.backdrop_path);
 
     const detailsTop = document.createElement("div");

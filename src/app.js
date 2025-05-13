@@ -11,9 +11,7 @@ import { showDetails } from "./showDetails.js";
 
 function getNormalizedPath() {
     const path = window.location.pathname;
-    const segments = path.split('/').filter(Boolean);
-    const lastSegment = segments[segments.length - 1];
-    return '/' + lastSegment;
+    return path === "/" ? "" : path;
 }
 
 const globalPath = {
@@ -55,32 +53,31 @@ function activeLink() {
 
 function appInit() {
 
-    const page = globalPath.currentPage.replace(".html", "").replace("/", "");
+    const page = globalPath.currentPage;
     switch (page) {
         case "":
-        case "index":
         case "/":
 
             popularMovies();
             displaySlider();
 
             break;
-        case "movie-details":
+        case "/movie-details":
             
             movieDetails()
 
             break;
-        case "search":
+        case "/search":
 
             search();
 
             break;
-        case "shows":
+        case "/shows":
 
             popularShows();
 
             break;
-        case "tv-details":
+        case "/tv-details":
 
             showDetails();
 
